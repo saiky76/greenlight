@@ -50,11 +50,57 @@
 }
 
 html, body {
-  font-family: "Source Sans Pro" !important;
+  font-family: Muli !important;
   position: relative;
   width: 100%;
   height: 100%;
   background-color: white;
+}
+/* 
+i.fas.pr-1{
+
+
+  color:white !important;
+  &:active{
+    color:red !important;
+  }
+
+}
+
+i.fas.pr-1{
+  color:white !important;
+  &:hover{
+    color:red !important;
+  }
+
+}
+
+i.fas.pr-1{
+  color:white !important;
+  &:focus{
+    color:red !important;
+  }
+
+}
+
+i.fas.pr-1{
+  color:white !important;
+  &::selection{
+    color:red !important;
+  }
+
+}
+
+i.fas.pr-1{
+  color:white !important;
+  &:visited{
+    color:red !important;
+  }
+
+} */
+
+.text-default{
+  color:white !important;
 }
 
 a {
@@ -84,6 +130,8 @@ a {
 .footer {
   height: $footer-height;
   width: 100%;
+
+  
 }
 
 .background {
@@ -119,7 +167,7 @@ a {
 }
 
 .force-text-normal {
-  color: #495057;
+  color: white;
 }
 
 .terms {
@@ -154,13 +202,13 @@ input:focus {
 
   &:hover {
     padding-bottom: 21px;
-    border-bottom: 1px solid $primary;
+    border-bottom: 1px solid white;
   }
 
   &.active {
     color: $primary !important;
     padding-bottom: 21px;
-    border-bottom: 1px solid $primary;
+    border-bottom: 1px solid white;
   }
 }
 
