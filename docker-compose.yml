@@ -13,7 +13,8 @@ services:
       - ./app:/usr/src/app/app
       - ./config:/usr/src/app/config
       - ./db/production:/usr/src/app/db/production   
-
+    extra_hosts:
+      - "bbb.pipitacademy.com:10.10.0.79"
 # When using sqlite3 as the database
 #    volumes:
 #      - ./db/production:/usr/src/app/db/production
