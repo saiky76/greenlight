@@ -145,7 +145,7 @@ class RoomsController < ApplicationController
     opts[:require_moderator_approval] = room_settings["requireModeratorApproval"]
 
     begin
-      redirect_to join_path(@room, current_user.name, opts, current_user.uid)
+      redirect_to join_path(@room, current_user.name, current_user.email, opts, current_user.uid)
     rescue BigBlueButton::BigBlueButtonException => e
       logger.error("Support: #{@room.uid} start failed: #{e}")
 

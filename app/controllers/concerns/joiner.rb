@@ -58,10 +58,10 @@ module Joiner
       opts[:require_moderator_approval] = room_settings["requireModeratorApproval"]
 
       if current_user
-        redirect_to join_path(@room, current_user.name, opts, current_user.uid)
+        redirect_to join_path(@room, current_user.name, current_user.email, opts, current_user.uid)
       else
         join_name = params[:join_name] || params[@room.invite_path][:join_name]
-        redirect_to join_path(@room, join_name, opts)
+        redirect_to join_path(@room, join_name, nil, opts)
       end
     else
       search_params = params[@room.invite_path] || params

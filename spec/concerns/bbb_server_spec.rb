@@ -71,7 +71,7 @@ describe BbbServer do
       checksum_string = "join#{query + secret}"
 
       checksum = OpenSSL::Digest.digest('sha1', checksum_string).unpack1("H*")
-      expect(join_path(@room, "Example")).to eql("#{endpoint}join?#{query}&checksum=#{checksum}")
+      expect(join_path(@room, "Example", nil)).to eql("#{endpoint}join?#{query}&checksum=#{checksum}")
     end
   end
 

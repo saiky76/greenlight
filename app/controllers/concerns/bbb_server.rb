@@ -38,7 +38,7 @@ module BbbServer
   end
 
   # Returns a URL to join a user into a meeting.
-  def join_path(room, name, options = {}, uid = nil)
+  def join_path(room, name, email, options = {}, uid = nil)
     # Create the meeting, even if it's running
     start_session(room, options)
 
@@ -49,6 +49,7 @@ module BbbServer
     join_opts = {}
     join_opts[:userID] = uid if uid
     join_opts[:join_via_html5] = true
+    join_opts[:email] = email    
     join_opts[:guest] = true if options[:require_moderator_approval] && !options[:user_is_moderator]
 
     bbb_server.join_meeting_url(room.bbb_id, name, password, join_opts)
