@@ -62,31 +62,22 @@ a {
 }
 
 .header {
-  background-color:#042D57 !important;
-  font-style: normal; 
-  font-weight: normal;
-  font-size: .9375rem; //15px - 13px
-  line-height: 1.1875rem;//19px - 17px
-  text-transform: capitalize;    
-  & .avatar {
-    background-color: #1a5577  !important;
+background-color: #042D57 !important;  
+ & .avatar {
+    background-color: #042D57 !important;
     color: white !important;
-    font-size: 1.25rem; //20px - 18px
-    line-height: 1.5rem;//24px - 22px
-  
   }
 
-  
   & a:hover:not(.btn) {
-    color: white !important;
+    color: $primary-color !important;
   }
 
   & .header-nav {
-    border-color: white;
+    border-color: $primary-color !important;
   }
 
   & .header-nav.active {
-    color: white !important;
+    color: $primary-color !important;
   }
 }
 
